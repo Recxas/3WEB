@@ -4,79 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>R.E.P.O. - Le Jeu Vidéo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      position: relative;
-      background: url('/mnt/data/df0d2266-b7d5-454a-8e17-ab4e15e30a3e.png') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 1rem;
-    }
-    .search-bar {
-      background: white;
-      border-radius: 8px;
-      padding: 0.5rem 1rem;
-      color: #000;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    .info-section {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background-color: #111;
-      padding: 2rem;
-    }
-    .info-box {
-      flex: 1 1 45%;
-      margin-bottom: 2rem;
-    }
-    .video-banner {
-      background: url('https://cdn.wallpapersafari.com/79/12/oZ8KST.jpg') center/cover no-repeat;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: white;
-      text-shadow: 2px 2px #000;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem 0;
-    }
-    .button {
-      background: #ccc;
-      color: #000;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .button:hover {
-      background: #aaa;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="search-bar">Barre de recherche</div>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">R.E.P.O.</div>
+        <ul class="navbar-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="monstre.html">Monstres</a></li>
+          <li><a href="#">Avis</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+        <input class="search-bar" type="text" placeholder="Rechercher...">
+      </div>
+    </nav>
   </header>
 
   <div class="container">

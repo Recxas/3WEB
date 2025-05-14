@@ -9,22 +9,53 @@ body {
   padding: 0;
 }
 
-header {
-  position: relative;
-  background: url('/mnt/data/df0d2266-b7d5-454a-8e17-ab4e15e30a3e.png') center/cover no-repeat;
-  height: 300px;
+/* Navbar */
+.navbar {
+  background-color: #111;
+  padding: 1rem;
+  border-bottom: 2px solid #F8A114;
+}
+
+.navbar-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 1rem;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #F1F1F1;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #F1F1F1;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  border-bottom: 2px solid #F8A114;
 }
 
 .search-bar {
-  background: white;
-  border-radius: 8px;
   padding: 0.5rem 1rem;
-  color: #000;
-  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 1rem;
 }
 
 .container {
@@ -47,7 +78,7 @@ header {
 }
 
 .video-banner {
-  background: url('https://cdn.wallpapersafari.com/79/12/oZ8KST.jpg') center/cover no-repeat;
+  background: url('https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3241660/1ea445e044a2d5b09cfa8291350b63ebed6e5741/header.jpg?t=1743517226') center/cover no-repeat;
   height: 200px;
   display: flex;
   align-items: center;
