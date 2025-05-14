@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-FR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Designer</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <header>
+    <nav>
+      <h1 class="logo">MonPortfolio</h1>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero" id="accueil">
+      <h2>Je suis Alex, Designer UI/UX</h2>
+      <p>Je transforme vos idées en expériences visuelles mémorables.</p>
+      <div class="hero-buttons">
+        <a href="#projets" class="btn">Voir mes projets</a>
+        <a href="#contact" class="btn secondary">Contactez-moi</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="projets" class="projects">
+    <h2>Mes Projets</h2>
+    <p>Voici quelques-unes de mes réalisations récentes :</p>
+    <div class="grid">
+      <div class="project-card">Projet 1 - Application mobile</div>
+      <div class="project-card">Projet 2 - Site e-commerce</div>
+      <div class="project-card">Projet 3 - Identité visuelle</div>
+      <div class="project-card">Projet 4 - Dashboard UX</div>
+    </div>
+  </section>
+
+  <section id="apropos" class="about">
+    <h2>À propos de moi</h2>
+    <p>Designer passionné avec plus de 5 ans d’expérience. J’allie esthétique et fonctionnalité pour créer des interfaces intuitives et engageantes.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contactez-moi</h2>
+    <form>
+      <input type="text" placeholder="Votre nom" required />
+      <input type="email" placeholder="Votre email" required />
+      <textarea placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Alex Designer. Tous droits réservés.</p>
+  </footer>
 </body>
 </html>
