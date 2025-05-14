@@ -1,60 +1,110 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Designer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R.E.P.O. - Le Jeu Vidéo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    section {
+      background-color: #1c1c1c;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      padding-top: 2rem;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    a.button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">MonPortfolio</h1>
+  <div class="container">
+    <header>
+      <h1>R.E.P.O. - Le Jeu Vidéo</h1>
+      <p>Un jeu coopératif d'horreur futuriste où chaque mission peut être votre dernière.</p>
+    </header>
+
+    <section>
+      <h2>Présentation</h2>
+      <p>
+        R.E.P.O. (Retrieve, Extract and Profit Operation) est un jeu multijoueur en ligne
+        coopératif où vous incarnez des robots envoyés dans des zones hostiles pour
+        récupérer des objets de valeur. Chaque partie est unique grâce à la génération
+        procédurale des cartes.
+      </p>
+    </section>
+
+    <section>
+      <h2>Caractéristiques du jeu</h2>
       <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>Jusqu'à 6 joueurs en coopération</li>
+        <li>Physique réaliste des objets</li>
+        <li>Monstres imprévisibles et ambiance angoissante</li>
+        <li>Progression de type roguelike</li>
+        <li>Améliorations permanentes entre les missions</li>
       </ul>
-    </nav>
-    <div class="hero" id="accueil">
-      <h2>Je suis Alex, Designer UI/UX</h2>
-      <p>Je transforme vos idées en expériences visuelles mémorables.</p>
-      <div class="hero-buttons">
-        <a href="#projets" class="btn">Voir mes projets</a>
-        <a href="#contact" class="btn secondary">Contactez-moi</a>
-      </div>
-    </div>
-  </header>
+    </section>
 
-  <section id="projets" class="projects">
-    <h2>Mes Projets</h2>
-    <p>Voici quelques-unes de mes réalisations récentes :</p>
-    <div class="grid">
-      <div class="project-card">Projet 1 - Application mobile</div>
-      <div class="project-card">Projet 2 - Site e-commerce</div>
-      <div class="project-card">Projet 3 - Identité visuelle</div>
-      <div class="project-card">Projet 4 - Dashboard UX</div>
-    </div>
-  </section>
+    <section>
+      <h2>Astuces pour bien débuter</h2>
+      <ul>
+        <li>Communiquez constamment avec votre équipe</li>
+        <li>Manipulez les objets avec précaution</li>
+        <li>Améliorez vos capacités entre les sessions</li>
+        <li>Surveillez l'indicateur d'Overcharge</li>
+        <li>Utilisez la carte tactiquement</li>
+      </ul>
+    </section>
 
-  <section id="apropos" class="about">
-    <h2>À propos de moi</h2>
-    <p>Designer passionné avec plus de 5 ans d’expérience. J’allie esthétique et fonctionnalité pour créer des interfaces intuitives et engageantes.</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contactez-moi</h2>
-    <form>
-      <input type="text" placeholder="Votre nom" required />
-      <input type="email" placeholder="Votre email" required />
-      <textarea placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>© 2025 Alex Designer. Tous droits réservés.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 R.E.P.O. Fansite. Non affilié à Semiwork ou Steam.</p>
+      <a class="button" href="https://store.steampowered.com/app/3241660/REPO/" target="_blank">Voir sur Steam</a>
+    </footer>
+  </div>
 </body>
 </html>
+
