@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Import de la police Kodchasan */
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;700&display=swap');
 
@@ -115,59 +114,3 @@ body {
 h2, ul, p {
   color: #F1F1F1;
 }
-=======
-body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-size: 2.5rem;
-    }
-    section {
-      background-color: #1c1c1c;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-      padding-top: 2rem;
-    }
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-    a.button:hover {
-      background-color: #0056b3;
-    }
->>>>>>> 7219f4eddd613fb0a4f7f30c1bcfdc516a65dcd3
