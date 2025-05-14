@@ -5,78 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>R.E.P.O. - Le Jeu Vidéo</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="navbar-logo">
-          <img src="/mnt/data/4291ff7c-67d8-43d5-bdb7-0de85cb6e2c3.png" alt="Logo" style="height: 40px;">
-        </div>
-        <ul class="navbar-links">
-          <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="monstre.html">Monstres</a></li>
-          <li><a href="#">Avis</a></li>
-          <li><a href="#">Contacts</a></li>
-          <li><a href="#">Fanart</a></li>
-          <li><input class="search-bar" type="text" placeholder="Rechercher..."></li>
-        </ul>
+<header>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="navbar-logo">
+        <span>LOGO</span>
       </div>
-    </nav>
-    <div class="banner" style="background: url('/mnt/data/4291ff7c-67d8-43d5-bdb7-0de85cb6e2c3.png') center/cover no-repeat; height: 200px;"></div>
-  </header>
-
-  <main class="container">
-    <section class="info-section">
-      <div class="info-box">
-        <h2>Présentation</h2>
-        <p>
-          R.E.P.O. (Retrieve, Extract and Profit Operation) est un jeu multijoueur en ligne coopératif
-          où vous incarnez des robots envoyés dans des zones hostiles pour récupérer des objets de valeur.
-          Chaque partie est unique grâce à la génération procédurale des cartes.
-        </p>
-      </div>
-      <div class="info-box">
-        <h2>Caractéristiques du jeu</h2>
-        <ul>
-          <li>Jusqu'à 6 joueurs en coopération</li>
-          <li>Physique réaliste des objets</li>
-          <li>Monstres imprévisibles et ambiance angoissante</li>
-          <li>Progression de type roguelike</li>
-          <li>Améliorations permanentes entre les missions</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="video-banner">
-      BANNIÈRE VIDÉO CHAT GPT
-    </section>
-
-    <section class="tips">
-      <h2>Astuces pour les débutants</h2>
-      <ul>
-        <li>Manipulez les objets avec soin : Évitez de les heurter ou de les faire tomber pour préserver leur valeur.</li>
-        <li>Utilisez la carte : Elle vous aide à localiser les objets, les points d'extraction et à planifier vos déplacements.</li>
-        <li>Communiquez avec votre équipe : La coordination est essentielle, surtout lors des phases d'extraction.</li>
-        <li>Améliorez vos compétences : Investissez dans des améliorations de santé, d'endurance et de force pour survivre plus longtemps.</li>
-        <li>N'oubliez pas de communiquer !</li>
+    </div>
+    <div class="navbar-right">
+      <div class="language">FR</div>
+      <input type="text" class="search-bar" placeholder="Rechercher...">
+      <ul class="navbar-links">
+        <li><a href="#" class="active">Accueil</a></li>
+        <li><a href="#">Monstres</a></li>
+        <li><a href="#">Avis</a></li>
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Fanart</a></li>
       </ul>
-    </section>
+    </div>
+  </nav>
+  <div class="banner"></div>
+</header>
 
-    <section class="screenshots" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; padding: 2rem 0;">
-      <img src="screenshot1.jpg" alt="Screenshot 1" style="width: 30%; border: 2px solid #F8A114;">
-      <img src="screenshot2.jpg" alt="Screenshot 2" style="width: 30%; border: 2px solid #F8A114;">
-      <img src="screenshot3.jpg" alt="Screenshot 3" style="width: 30%; border: 2px solid #F8A114;">
-      <img src="screenshot4.jpg" alt="Screenshot 4" style="width: 30%; border: 2px solid #F8A114;">
-    </section>
+  <main>
+    <section class="presentation">
+  <div class="presentation-left">
+    <h2>Présentation</h2>
+    <p>
+      R.E.P.O. (Retrieve, Extract and Profit Operation) est un jeu multijoueur en ligne coopératif
+      où vous incarnez des robots envoyés dans des zones hostiles pour récupérer des objets de valeur.
+      Chaque partie est unique grâce à la génération procédurale des cartes.
+    </p>
+  </div>
+  <div class="presentation-right">
+    <h2>Caractéristiques du jeu</h2>
+    <ul>
+      <li>Jusqu'à 6 joueurs en coopération</li>
+      <li>Monstres imprévisibles</li>
+      <li>Ambiance angoissante</li>
+      <li>Améliorations permanentes entre les missions</li>
+    </ul>
+  </div>
+</section>
+<div class="presentation-image"></div>
 
-    <div class="buttons" style="text-align: center; padding: 2rem 0;">
-      <a class="button" href="https://store.steampowered.com/app/3241660/REPO/" target="_blank">OUVRIR SUR STEAM</a>
+<section class="tips">
+  <div class="tips-text">
+    <h2>Astuces pour les débutants</h2>
+    <p>Manipulez les objets avec soin : évitez de les heurter ou de les faire tomber pour préserver leur valeur.</p>
+    <p>Utilisez la carte : elle vous aide à localiser les objets, les points d'extraction et à planifier vos déplacements.</p>
+    <p>Améliorez vos compétences : investissez dans des améliorations de santé, d'endurance et de force pour survivre plus longtemps.</p>
+    <p>N'oubliez pas de communiquer !</p>
+  </div>
+  <div class="tips-images">
+    <img src="img1.gif" alt="Astuce 1">
+    <img src="img2.gif" alt="Astuce 2">
+    <img src="img3.gif" alt="Astuce 3">
+    <img src="img4.gif" alt="Astuce 4">
+  </div>
+</section>
+
+    <div class="steam-button">
+      <a href="#">OUVRIR SUR STEAM</a>
     </div>
   </main>
 
-  <footer style="background: #d9a74d; padding: 1rem; text-align: center; color: #020200; font-weight: bold;">
-    COPYRIGHT<br>FAN MADE SITE
+  <footer>
+    <p>COPYRIGHT<br>FAN MADE SITE</p>
   </footer>
 </body>
 </html>
