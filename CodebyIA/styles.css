@@ -88,6 +88,10 @@ body {
   color: white;
   text-shadow: 2px 2px #000;
 }
+.video-banner video {
+  width: 100px;
+  height: 200px;
+}
 
 .buttons {
   display: flex;
