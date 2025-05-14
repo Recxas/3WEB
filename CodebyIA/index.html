@@ -10,20 +10,25 @@
   <header>
     <nav class="navbar">
       <div class="navbar-container">
-        <div class="navbar-logo">R.E.P.O.</div>
-        <ul class="navbar-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="monstre.html">Monstres</a></li>
-          <li><a href="#">Avis</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-        <input class="search-bar" type="text" placeholder="Rechercher...">
+        <div class="navbar-logo">
+          <img src="logo.png" alt="Logo R.E.P.O." style="height: 40px;">
+        </div>
+        <div class="navbar-right">
+          <ul class="navbar-links">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="monstre.html">Monstres</a></li>
+            <li><a href="#">Avis</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><input class="search-bar" type="text" placeholder="Rechercher..."></li>
+          </ul>
+        </div>
       </div>
     </nav>
+    <div class="banner" style="background: url('/mnt/data/9b4a7ea9-f762-497f-9d80-db47d17120c3.png') center/cover no-repeat; height: 200px;"></div>
   </header>
 
-  <div class="container">
-    <div class="info-section">
+  <main class="container">
+    <section class="info-section">
       <div class="info-box">
         <h2>Présentation</h2>
         <p>
@@ -42,17 +47,31 @@
           <li>Améliorations permanentes entre les missions</li>
         </ul>
       </div>
+    </section>
+
+    <section class="video-banner">
+      BANNIÈRE VIDÉO CHAT GPT
+    </section>
+
+    <section class="tips">
+      <h2>Astuces pour les débutants</h2>
+      <ul>
+        <li>Manipulez les objets avec soin : Évitez de les heurter ou de les faire tomber pour préserver leur valeur.</li>
+        <li>Utilisez la carte : Elle vous aide à localiser les objets, les points d'extraction et à planifier vos déplacements.</li>
+        <li>Communiquez avec votre équipe : La coordination est essentielle, surtout lors des phases d'extraction.</li>
+        <li>Améliorez vos compétences : Investissez dans des améliorations de santé, d'endurance et de force pour survivre plus longtemps.</li>
+      </ul>
+    </section>
+
+    <section class="screenshots" style="display: flex; gap: 2rem; justify-content: center; padding: 2rem 0;">
+      <img src="screenshot1.jpg" alt="Screenshot 1" style="width: 30%; border: 2px solid #F8A114;">
+      <img src="screenshot2.jpg" alt="Screenshot 2" style="width: 30%; border: 2px solid #F8A114;">
+      <img src="screenshot3.jpg" alt="Screenshot 3" style="width: 30%; border: 2px solid #F8A114;">
+    </section>
+
+    <div class="buttons" style="text-align: center;">
+      <a class="button" href="https://store.steampowered.com/app/3241660/REPO/" target="_blank">Ouvrir sur steam</a>
     </div>
-  </div>
-
-  <div class="video-banner">
-    <video src="/video/video.mp4"></video>
-  </div>
-
-  <div class="buttons">
-    <a class="button" href="https://store.steampowered.com/app/3241660/REPO/" target="_blank">ouvrir sur steam</a>
-    <a class="button" href="wiki.html">aller sur le wiki</a>
-    <a class="button" href="monstre.html">voir les monstres</a>
-  </div>
+  </main>
 </body>
 </html>
