@@ -1,8 +1,8 @@
-/* Import de la police Kodchasan */
-@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@300;400;700&display=swap');
+/* Import de la police Kumbh Sans */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
 
 body {
-  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
   background-color: #020200;
   color: #F1F1F1;
   margin: 0;
@@ -13,7 +13,6 @@ body {
 .navbar {
   background-color: #111;
   padding: 1rem;
-  border-bottom: 2px solid #F8A114;
 }
 
 .navbar-container {
@@ -24,18 +23,22 @@ body {
   margin: auto;
 }
 
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #F1F1F1;
+.navbar-logo img {
+  height: 40px;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-links li a {
@@ -51,11 +54,12 @@ body {
 }
 
 .search-bar {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 8px;
   border: none;
-  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
   font-size: 1rem;
+  margin-left: 1rem;
 }
 
 .container {
@@ -70,15 +74,15 @@ body {
   flex-wrap: wrap;
   background-color: #111;
   padding: 2rem;
+  gap: 2rem;
 }
 
 .info-box {
   flex: 1 1 45%;
-  margin-bottom: 2rem;
 }
 
 .video-banner {
-  background: url('https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3241660/1ea445e044a2d5b09cfa8291350b63ebed6e5741/header.jpg?t=1743517226') center/cover no-repeat;
+  background: url('https://cdn.wallpapersafari.com/79/12/oZ8KST.jpg') center/cover no-repeat;
   height: 200px;
   display: flex;
   align-items: center;
@@ -88,31 +92,47 @@ body {
   color: white;
   text-shadow: 2px 2px #000;
 }
-.video-banner video {
-  width: 100px;
-  height: 200px;
+
+.tips ul {
+  padding-left: 1.5rem;
+}
+
+.screenshots img {
+  border: 2px solid #F8A114;
+  border-radius: 4px;
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  text-align: center;
   padding: 2rem 0;
 }
 
 .button {
-  background-color: #F8A114;
+  background: linear-gradient(135deg, #F8A114, #e6c675);
   color: rgba(2, 2, 0, 0.5);
   font-style: italic;
   font-weight: 300;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
+  display: inline-block;
+  font-family: 'Kumbh Sans', sans-serif;
+  border: none;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: #e5940f;
+  background: linear-gradient(135deg, #e5940f, #c9b155);
+}
+
+footer {
+  background: #d9a74d;
+  padding: 1rem;
+  text-align: center;
+  color: #020200;
+  font-weight: bold;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 h2, ul, p {
