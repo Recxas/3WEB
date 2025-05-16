@@ -3,56 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>R.E.P.O. - Le Jeu Vidéo</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>R.E.P.O - Fan Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      padding: 10px 20px;
+    }
+    header img {
+      height: 60px;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #111;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      border: none;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 5px 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      color: gold;
+    }
+    .features {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .beginner-tips {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .tip-text {
+      order: 2;
+    }
+    .tip-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      order: 1;
+    }
+    .tip-images img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+    }
+    .steam-btn {
+      background-color: gold;
+      color: black;
+      padding: 15px 30px;
+      text-align: center;
+      font-weight: bold;
+      margin: 40px auto;
+      display: block;
+      width: fit-content;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: gold;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="navbar-logo">R.E.P.O.</div>
-        <ul class="navbar-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="monstre.html">Monstres</a></li>
-          <li><a href="#">Avis</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-        <input class="search-bar" type="text" placeholder="Rechercher...">
-      </div>
-    </nav>
+    <img src="logo.png" alt="Logo">
+    <input type="text" placeholder="Rechercher...">
   </header>
 
-  <div class="container">
-    <div class="info-section">
-      <div class="info-box">
-        <h2>Présentation</h2>
-        <p>
-          R.E.P.O. (Retrieve, Extract and Profit Operation) est un jeu multijoueur en ligne coopératif
-          où vous incarnez des robots envoyés dans des zones hostiles pour récupérer des objets de valeur.
-          Chaque partie est unique grâce à la génération procédurale des cartes.
-        </p>
+  <nav class="navbar">
+    <a href="#">Accueil</a>
+    <a href="#">Monstres</a>
+    <a href="#">Avis</a>
+    <a href="#">Contact</a>
+    <a href="#">Fanart</a>
+  </nav>
+
+  <section class="section">
+    <h2>Présentation</h2>
+    <p>R.E.P.O. (Retrieve, Extract and Profit Operation) est un jeu multijoueur en ligne coopératif où vous incarnez des robots envoyés dans des zones hostiles pour récupérer des objets de valeur, chaque partie est unique grâce à la génération procédurale des cartes.</p>
+  </section>
+
+  <section class="section">
+    <h2>Caractéristiques du jeu</h2>
+    <div class="features">
+      <ul>
+        <li>Jusqu'à 6 joueurs en coopération</li>
+        <li>Monstres imprévisibles</li>
+        <li>Ambiances angoissantes</li>
+        <li>Améliorations permanentes entre les missions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Astuces pour les débutants</h2>
+    <div class="beginner-tips">
+      <div class="tip-images">
+        <img src="astuce1.png" alt="Astuce 1">
+        <img src="astuce2.png" alt="Astuce 2">
+        <img src="astuce3.png" alt="Astuce 3">
       </div>
-      <div class="info-box">
-        <h2>Caractéristiques du jeu</h2>
-        <ul>
-          <li>Jusqu'à 6 joueurs en coopération</li>
-          <li>Physique réaliste des objets</li>
-          <li>Monstres imprévisibles et ambiance angoissante</li>
-          <li>Progression de type roguelike</li>
-          <li>Améliorations permanentes entre les missions</li>
-        </ul>
+      <div class="tip-text">
+        <p>Manipulez les objets avec soin. Évitez de les heurter ou de les faire tomber pour préserver leur valeur.</p>
+        <p>Utilisez la carte : Elle vous aide à localiser les objets, les points d'extraction et à planifier vos déplacements.</p>
+        <p>Améliorez vos compétences : Investissez dans des améliorations de santé, d'endurance et de force pour survivre plus longtemps.</p>
+        <p>N'oubliez pas de communiquer !</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="video-banner">
-    <video autoplay muted loop src="/video/video.mp4"></video>
-  </div>
+  <a href="#" class="steam-btn">OUVRIR SUR STEAM</a>
 
-  <div class="buttons">
-    <a class="button" href="https://store.steampowered.com/app/3241660/REPO/" target="_blank">ouvrir sur steam</a>
-    <a class="button" href="wiki.html">aller sur le wiki</a>
-    <a class="button" href="monstre.html">voir les monstres</a>
-  </div>
+  <footer>
+    COPYRIGHT<br>FAN MADE SITE
+  </footer>
 </body>
 </html>
