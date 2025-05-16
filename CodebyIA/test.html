@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R.E.P.O. - Le jeu coopératif</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ... styles précédents ... */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  pointer-events: none;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAKklEQVQYV2NkYGD4z0AEYBxVSNUCqEagGoRqBqEagWoRqBqEaABBgAAmEMC8bWN7d4AAAAASUVORK5CYII=");
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.15; /* Opacité augmentée */
+  z-index: 1;
+  animation: grainMove 1s steps(3) infinite;
+}
+
+/* Animation de grain plus dynamique */
+@keyframes grainMove {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -2px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Animation lumineuse plus douce en jaune */
+@keyframes softYellowGlow {
+  0% {
+    text-shadow: 0 0 2px #ffec8b, 0 0 4px #ffec8b;
+  }
+  50% {
+    text-shadow: 0 0 6px #fff799, 0 0 12px #fff799;
+  }
+  100% {
+    text-shadow: 0 0 2px #ffec8b, 0 0 4px #ffec8b;
+  }
+}
+
+h1 {
+  color: #ffd700;
+  animation: softYellowGlow 3s ease-in-out infinite;
+}
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #020200;
+      color: #e0e0e0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAF0lEQVQYV2NkYGD4z0ABYBxVSFUBAD1CB9iQaWXxAAAAAElFTkSuQmCC");
+      background-repeat: repeat;
+      opacity: 0.06;
+      z-index: 1;
+      animation: grainMove 1s infinite;
+    }
+
+    @keyframes grainMove {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(1px, -1px); }
+      50% { transform: translate(-1px, 1px); }
+      75% { transform: translate(1px, 1px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    header {
+      background: #141414;
+      padding: 1.5rem;
+      border-bottom: 3px solid #ff9500;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ff9500;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff9500;
+      margin-top: 1rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    h2 {
+      color: #ff9500;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+
+    .img-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .img-container img {
+      width: 80%;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff950022;
+    }
+
+    .steam-button {
+      display: block;
+      width: 250px;
+      margin: 2rem auto;
+      padding: 10px;
+      background-color: #171a21;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s;
+      z-index: 2;
+      position: relative;
+    }
+
+    .steam-button:hover {
+      background-color: #1e2836;
+    }
+
+    .steam-button i {
+      margin-right: 8px;
+    }
+
+    footer {
+      background: #1c1c1c;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      z-index: 2;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .img-container img {
+        width: 95%;
+      }
+    }
+@keyframes softYellowGlow {
+  0% {
+    text-shadow: 0 0 2px #ffd700, 0 0 4px #ffd700;
+  }
+  50% {
+    text-shadow: 0 0 6px #fff066, 0 0 10px #fff066;
+  }
+  100% {
+    text-shadow: 0 0 2px #ffd700, 0 0 4px #ffd700;
+  }
+}
+
+h1 {
+  color: #ff9500;
+  animation: softYellowGlow 3s ease-in-out infinite;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+  <div id="particles-js"></div>
+
+  <header>
+    <nav>
+      <a href="#accueil"><i class="fas fa-house"></i> Accueil</a>
+      <a href="#monstres"><i class="fas fa-skull"></i> Monstres</a>
+      <a href="#avis"><i class="fas fa-comment-alt"></i> Avis</a>
+      <a href="#contacts"><i class="fas fa-envelope"></i> Contacts</a>
+      <a href="#fanarts"><i class="fas fa-palette"></i> Fanarts</a>
+    </nav>
+  </header>
+
+  <h1 id="accueil">R.E.P.O. - Retrieve, Extract and Profit Operation</h1>
+
+  <div class="container">
+
+    <section id="monstres">
+      <h2>Monstres</h2>
+      <p>Les zones sont peuplées de créatures imprévisibles et hostiles. Chaque mission est une lutte pour la survie. La coordination est essentielle pour éviter d'être submergé.</p>
+      <div class="img-container">
+        <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3241660/extras/00_title_repo.png?t=1743517226" alt="Monstres de R.E.P.O.">
+      </div>
+    </section>
+
+    <section id="avis">
+      <h2>Avis</h2>
+      <p>Les joueurs saluent l'immersion, la tension constante, et la nécessité d'une vraie coopération. Une expérience unique à chaque partie grâce à la génération procédurale.</p>
+    </section>
+
+    <section id="contacts">
+      <h2>Contacts</h2>
+      <p>Pour toute question ou retour, contactez l'équipe via Discord ou Steam. Ce site est un projet de fan et n'est pas affilié officiellement aux développeurs.</p>
+    </section>
+
+    <section id="fanarts">
+      <h2>Fanarts</h2>
+      <p>Découvrez les créations de la communauté ! Illustrations, modélisations 3D, vidéos... la passion autour de R.E.P.O. ne cesse de grandir.</p>
+      <div class="img-container">
+        <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/3241660/extras/04_title_outro.png?t=1743517226" alt="Fanart R.E.P.O.">
+      </div>
+    </section>
+
+    <a href="https://store.steampowered.com/app/3241660/REPO/" class="steam-button" target="_blank">
+      <i class="fab fa-steam"></i> Accéder au jeu sur Steam
+    </a>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Site non-officiel du jeu R.E.P.O. | Créé par un fan passionné
+  </footer>
+
+  <!-- Script Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ff9500" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.2 },
+        "size": { "value": 2 },
+        "line_linked": { "enable": false },
+        "move": {
+          "enable": true,
+          "speed": 0.5,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": false },
+          "onclick": { "enable": false },
+          "resize": true
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+  <!-- Scroll animation -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
