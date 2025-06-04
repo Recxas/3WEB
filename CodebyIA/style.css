@@ -13,6 +13,19 @@ body {
   color: #F1F1F1;
 }
 
+.video-intro {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 2px solid #F8A114;
+}
+
+.video-intro video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .banner {
   position: relative;
   width: 100%;
