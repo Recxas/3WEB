@@ -12,6 +12,8 @@
     }
     .banner-wrapper {
       position: relative;
+      background-color: #F8A114;
+      height: 100%;
     }
     .banner-wrapper img {
       width: 100%;
@@ -60,11 +62,21 @@
     .menu li a.active {
       border-bottom: 2px solid #F8A114;
     }
+    .video-intro video {
+      height: fit-content;
+    }
   </style>
 </head>
 <body>
+
   <section class="banner">
     <div class="banner-wrapper">
+        <section class="video-intro">
+  <video autoplay muted loop playsinline>
+    <source src="video/video.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas la lecture de la vidéo.
+  </video>
+</section>
       <div class="right-group">
         <div class="lang-search">
           <span class="lang">FR</span>
@@ -81,12 +93,7 @@
     </div>
   </section>
   
-<section class="video-intro">
-  <video autoplay muted loop playsinline>
-    <source src="/mnt/data/intro-video.mp4" type="video/mp4">
-    Votre navigateur ne supporte pas la lecture de la vidéo.
-  </video>
-</section>
+
 
 <section class="presentation">
   <div class="presentation-container">
