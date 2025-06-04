@@ -6,26 +6,78 @@
   <title>R.E.P.O. - Jeu Vidéo</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+    }
+    .banner-wrapper {
+      position: relative;
+    }
+    .banner-wrapper img {
+      width: 100%;
+      display: block;
+    }
+    .right-group {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1rem;
+    }
+    .lang-search {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .lang {
+      font-weight: bold;
+      color: white;
+    }
+    .search {
+      padding: 0.4rem 0.8rem;
+      border-radius: 10px;
+      border: none;
+      font-style: italic;
+      background-color: #f1f1f1;
+      color: rgba(2, 2, 0, 0.5);
+    }
+    .menu {
+      list-style: none;
+      background: black;
+      padding: 1rem;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .menu li a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .menu li a.active {
+      border-bottom: 2px solid #F8A114;
+    }
+  </style>
 </head>
 <body>
   <section class="banner">
     <div class="banner-wrapper">
       <img src="/mnt/data/86a8ff6b-518e-4f0b-99d0-947a07be7385.png" alt="Image de couverture du jeu">
-      <div class="banner-content">
-        <h1 class="logo">R.E.P.O.</h1>
-        <div class="right-group">
-          <div class="lang-search">
-            <span class="lang">FR</span>
-            <input type="text" class="search" placeholder="Rechercher...">
-          </div>
-          <ul class="menu">
-            <li><a href="#" class="active">Accueil</a></li>
-            <li><a href="#">Monstres</a></li>
-            <li><a href="#">Avis</a></li>
-            <li><a href="#">Contacts</a></li>
-            <li><a href="#">Fanart</a></li>
-          </ul>
+      <div class="right-group">
+        <div class="lang-search">
+          <span class="lang">FR</span>
+          <input type="text" class="search" placeholder="Rechercher...">
         </div>
+        <ul class="menu">
+          <li><a href="#" class="active">Accueil</a></li>
+          <li><a href="#">Monstres</a></li>
+          <li><a href="#">Avis</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">Fanart</a></li>
+        </ul>
       </div>
     </div>
   </section>
