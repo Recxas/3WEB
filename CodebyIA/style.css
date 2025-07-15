@@ -11,6 +11,7 @@ body {
   font-family: 'Kumbh Sans', sans-serif;
   background-color: #020200;
   color: #F1F1F1;
+   margin: 0;
 }
 
 .video-intro {
@@ -34,6 +35,8 @@ body {
 
 .banner-wrapper {
   position: relative;
+  background-color: #F8A114;
+  height: 100%;
 }
 
 .banner-wrapper img {
@@ -150,6 +153,7 @@ body {
 .features {
   padding: 4rem 2rem;
   background-color: #000;
+  background-image: url("img/image.png");
   text-align: center;
   border-bottom: 2px solid #F8A114;
 }
@@ -198,6 +202,12 @@ body {
   object-fit: cover;
   display: block;
 }
+
+    
+.video-intro video {
+      height: fit-content;
+}
+
 /* ==== SECTION ASTUCES ==== */
 .tips-section {
   display: flex;
