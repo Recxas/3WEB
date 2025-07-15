@@ -343,9 +343,11 @@ body {
 
 .footer {
   background: url('/images/pixel-texture-gold.png'), #d9a74d; /* ou background-color: #d9a74d; */
+  background-image: url("img/grain.png");
   background-size: cover;
   color: #111;
   font-family: 'Kumbh Sans', sans-serif;
+  margin: 2rem 0rem 0rem 0rem;
   padding: 2rem 3rem 1rem;
 }
 
