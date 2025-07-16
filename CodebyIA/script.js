@@ -24,3 +24,43 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(el);
   });
 });
+
+// fanartForm.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("fanart-form");
+  const pseudo = document.getElementById("pseudo");
+  const email = document.getElementById("email");
+  const fileInput = document.getElementById("file");
+  const social = document.getElementById("social");
+  const uploadBox = document.getElementById("upload-box");
+  const fileIcon = document.getElementById("file-icon");
+
+  // Visuel : clique sur la boîte déclenche l'upload
+  uploadBox.addEventListener("click", () => {
+    fileInput.click();
+  });
+
+  // Affiche le nom du fichier sélectionné
+  fileInput.addEventListener("change", () => {
+    if (fileInput.files.length > 0) {
+      fileIcon.textContent = "✅ Fichier sélectionné : " + fileInput.files[0].name;
+    } else {
+      fileIcon.textContent = "⬆️";
+    }
+  });
+
+  // Envoi du formulaire
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!pseudo.value.trim() || !email.value.trim() || !fileInput.files.length || !social.value.trim()) {
+      alert("Merci de remplir tous les champs.");
+      return;
+    }
+
+    alert("Fanart envoyé avec succès !");
+    form.reset();
+    fileIcon.textContent = "⬆️";
+  });
+});
