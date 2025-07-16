@@ -369,3 +369,82 @@ body {
   font-size: 1rem;
   line-height: 1.3;
 }
+
+
+/* --- Section Monstre --- */
+.monster-section {
+  background: url('images/static-bg.png') repeat;
+  padding: 4rem 2rem;
+  color: white;
+  border-top: 2px solid #F8A114;
+}
+
+.monster-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.monster-text {
+  flex: 1 1 45%;
+}
+
+.monster-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.monster-text p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.monster-image {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.monster-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-video-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-top: 2px solid #F8A114;
+}
+
+.footer-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.4;
+  filter: brightness(0.5);
+}
+
+/* Le contenu du footer par-dessus */
+footer {
+  position: relative;
+  z-index: 1;
+  background: none;
+  padding: 2rem;
+  color: white;
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
