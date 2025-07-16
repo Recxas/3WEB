@@ -18,6 +18,18 @@ body {
   gap: 1.5rem;
 }
 
+.champtxt {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.champsocial {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 /* Inputs & textareas */
 #fanart-form input[type="text"],
 #fanart-form input[type="email"],
