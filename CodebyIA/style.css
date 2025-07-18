@@ -470,3 +470,45 @@ footer {
 }
 
 
+/* Hamburger caché par défaut */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Cacher le menu sur mobile par défaut */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* ajuster selon ton header */
+    right: 20px;
+    background-color: black;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 150px;
+    z-index: 10;
+  }
+
+  /* Afficher le hamburger sur mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Quand menu ouvert */
+  .menu.active {
+    display: flex;
+  }
+}
