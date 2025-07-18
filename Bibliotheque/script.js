@@ -99,5 +99,4 @@ getAvailableBooks();
 getUnavailableBooks();
 
 const titreRecherche = document.getElementById('searchInput').value;
-console.log("Le livre que vous recherchez est ", findBookByTitle(titreRecherche));
-document.getElementById('result').innerHTML = "Le livre que vous recherchez est " + findBookByTitle(titreRecherche).book.title;
+
