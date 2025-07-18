@@ -99,4 +99,3 @@ getAvailableBooks();
 getUnavailableBooks();
 
 const titreRecherche = document.getElementById('searchInput').value;
-
