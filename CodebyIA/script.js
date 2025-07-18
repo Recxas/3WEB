@@ -71,3 +71,61 @@ const menu = document.querySelector('.menu');
 hamburger.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
+
+
+const slider = document.getElementById('tipsSlider');
+const btnLeft = document.querySelector('.slider-btn.left');
+const btnRight = document.querySelector('.slider-btn.right');
+
+const slideWidth = slider.querySelector('img').offsetWidth + 16; // largeur image + gap (1rem = 16px)
+
+let isScrolling = false;
+
+// Cloner premier et dernier élément pour boucle infinie
+function cloneSlides() {
+  const slides = slider.children;
+  if (slides.length === 0) return;
+
+  const first = slides[0].cloneNode(true);
+  const last = slides[slides.length - 1].cloneNode(true);
+
+  slider.appendChild(first);
+  slider.insertBefore(last, slides[0]);
+}
+
+cloneSlides();
+
+// Position initiale sur le "premier vrai" slide (car on a ajouté un clone avant)
+slider.scrollLeft = slideWidth;
+
+function scrollTips(direction) {
+  if (isScrolling) return; // éviter clics multiples trop rapides
+  isScrolling = true;
+
+  slider.scrollBy({
+    left: direction * slideWidth,
+    behavior: 'smooth'
+  });
+
+  setTimeout(() => {
+    // Quand on arrive au début (scrollLeft <= 0)
+    if (slider.scrollLeft <= 0) {
+      // repositionne sans animation à la fin (dernier vrai slide)
+      slider.style.scrollBehavior = 'auto';
+      slider.scrollLeft = slider.scrollWidth - 2 * slideWidth;
+      slider.style.scrollBehavior = 'smooth';
+    }
+
+    // Quand on arrive à la fin (scrollLeft >= max)
+    if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+      // repositionne sans animation au début (premier vrai slide)
+      slider.style.scrollBehavior = 'auto';
+      slider.scrollLeft = slideWidth;
+      slider.style.scrollBehavior = 'smooth';
+    }
+
+    isScrolling = false;
+  }, 400); // temps animation smooth (ajuste si besoin)
+}
+
+// Optionnel: si tu veux faire défiler aussi au swipe tactile ou auto-scroll, tu peux me demander !

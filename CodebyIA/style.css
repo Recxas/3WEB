@@ -288,6 +288,14 @@ body {
   height: 310px;
   overflow: hidden;
 }
+.slider-track {
+  -ms-overflow-style: none;  /* IE et Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.slider-track::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari et Opera */
+}
 
 .slider-track {
   display: flex;
