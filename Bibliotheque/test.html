@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibliothèque</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px;
+    }
+    #booksList {
+      margin-top: 20px;
+    }
+    .book {
+      background: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .unavailable {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>📚 Ma Bibliothèque</h1>
+
+  <div>
+    <input type="text" id="titleInput" placeholder="Titre du livre" />
+    <button onclick="addBook()">Ajouter</button>
+  </div>
+
+  <div>
+    <input type="text" id="searchInput" placeholder="Rechercher un livre..." oninput="searchBooks()" />
+  </div>
+
+  <div id="booksList"></div>
+
+  <script>
+    
+    // Tableau pour stocker les livres
+    let books = [];
+
+    // Fonction constructeur d'un livre (objet)
+    function Book(title, ) {
+      this.title = title;
+      this.isAvailable = true;
+    }
+
+    // Fonction pour ajouter un livre
+    function addBook() {
+      const title = document.getElementById('titleInput').value.trim();
+      if (title === "") {
+        alert("Veuillez entrer un titre.");
+        return;
+      }
+      const book = new Book(title);
+      books.push(book);
+      document.getElementById('titleInput').value = "";
+      listBooks();
+    }
+
+    // Fonction pour lister les livres
+    function listBooks() {
+      const listDiv = document.getElementById('booksList');
+      listDiv.innerHTML = "";
+
+      for (let i = 0; i < books.length; i++) {
+        const book = books[i];
+        const bookDiv = document.createElement('div');
+        bookDiv.className = 'book';
+        bookDiv.innerHTML = `<strong>${book.title}</strong> 
+          - ${book.isAvailable ? "Disponible" : "<span class='unavailable'>Emprunté</span>"} 
+          <button onclick="borrowBook(${i})">Emprunter</button>
+          <button onclick="returnBook(${i})">Retourner</button>`;
+        listDiv.appendChild(bookDiv);
+      }
+    }
+
+    // Fonction pour emprunter un livre
+    function borrowBook(index) {
+      const book = books[index];
+      if (book.isAvailable) {
+        book.isAvailable = false;
+        alert(`Vous avez emprunté "${book.title}".`);
+      } else {
+        alert(`"${book.title}" est déjà emprunté.`);
+      }
+      listBooks();
+    }
+
+    // Fonction pour retourner un livre
+    function returnBook(index) {
+      const book = books[index];
+      if (!book.isAvailable) {
+        book.isAvailable = true;
+        alert(`Vous avez retourné "${book.title}".`);
+      } else {
+        alert(`"${book.title}" est déjà disponible.`);
+      }
+      listBooks();
+    }
+
+    // Fonction de recherche par titre
+    function searchBooks() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const listDiv = document.getElementById('booksList');
+      listDiv.innerHTML = "";
+
+      for (let i = 0; i < books.length; i++) {
+        const book = books[i];
+        if (book.title.toLowerCase().includes(query)) {
+          const bookDiv = document.createElement('div');
+          bookDiv.className = 'book';
+          bookDiv.innerHTML = `<strong>${book.title}</strong> 
+            - ${book.isAvailable ? "Disponible" : "<span class='unavailable'>Emprunté</span>"} 
+            <button onclick="borrowBook(${i})">Emprunter</button>
+            <button onclick="returnBook(${i})">Retourner</button>`;
+          listDiv.appendChild(bookDiv);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
